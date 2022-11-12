@@ -1,0 +1,58 @@
+
+
+.activities {
+    padding-top: 0;
+
+    @media screen and (max-width: ($desktop - 1)) {
+        display: none;
+    }
+}
+
+
+.activities__header {
+    margin-bottom: 50px;
+
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--second-text-color);
+}
+
+
+.activities__list {
+    display: flex;
+}
+
+
+.activities__item {
+    width: calc((100% - 2 * 30px) / 3);
+    margin-right: 30px;
+
+    position: relative;
+
+    &:last-child {
+            margin-right: 0;
+        }
+}
+
+
+.activities__text {
+    width: 100%;
+    padding-top: 27px;
+    padding-bottom: 27px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--third-text-color);
+    background-color: var(--activities-overlay-color);
+
+    position: absolute;
+    bottom: 0;
+}
+
+

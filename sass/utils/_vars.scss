@@ -1,0 +1,28 @@
+/* палитра цветов */
+
+:root {
+    --main-text-color: #757575;
+    --second-text-color: #212121;
+    --third-text-color: #ffffff;
+    --main-bg-color: #ffffff;
+    --second-bg-color: #2f303a;
+    --third-bg-color: #f5f4fa;
+    --logo-header-color: #000000;
+    --filters-btn-color: #f5f4fa;
+    --accent-color: #2196f3;
+    --accent-order-color: #188ce8;
+    --footer-link-color: rgba(255, 255, 255, 0.6);
+    --header-border-color: #ececec;
+    --filter-border-color: #eeeeee;
+    --icons-bg-color: rgba(255, 255, 255, 0.1);
+    --icons-color: #afb1b8;
+    --activities-overlay-color: rgba(47, 48, 58, 0.8);
+    --overflow-bg-color: rgba(33, 150, 243, 0.9);
+    --backdrop-color: rgba(0, 0, 0, 0.2);
+    --modal-btn-border: rgba(0, 0, 0, 0.1);
+    --form-border-color: rgba(255, 255, 255, 0.3);
+    --form-border-shadow: rgba(0, 0, 0, 0.15);
+    --form-border-active: rgba(33, 150, 243, 0);
+    --form-border-modal: rgba(33, 33, 33, 0.2);
+    --placeholder-color: rgba(117, 117, 117, 0.5);
+}
