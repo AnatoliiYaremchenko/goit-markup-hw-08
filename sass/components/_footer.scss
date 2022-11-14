@@ -8,26 +8,65 @@
 
     .logo {
             margin-bottom: 20px;
+            text-align: center;
+
+            @media screen and (min-width: $desktop) {
+                text-align: left;
+            }
         }
 }
 
 
 .footer__form {
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
+
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    align-items: center;
+    /* position: relative; */
+
+
+    @media screen and (min-width: $desktop) {
+        align-items: flex-start;
+    }
+}
+
+
+.footer__box-btn {
+    width: 200px;
     position: relative;
 }
 
 
 .footer__conteiner {
-    display: flex;
-    align-items: baseline;
+
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: center;
+    }
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: nowrap;
+    }
 }
 
 
 .footer__wrapper-1 {
-    margin-right: 70px;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: $tablet) {
+            margin-right: 165px;
+        }
+
+    @media screen and (min-width: $desktop) {
+        margin-right: 70px;
+        margin-bottom: 0;
+    }
 }
 
 
@@ -39,6 +78,20 @@
 .footer__map,
 .footer__mail {
     margin-bottom: 9px;
+    text-align: center;
+            
+    @media screen and (min-width: $desktop) {
+        text-align: left;
+    }
+}
+
+
+.footer__phone {
+    text-align: center;
+
+    @media screen and (min-width: $desktop) {
+        text-align: left;
+    }
 }
 
 
@@ -82,7 +135,15 @@
 
 
 .footer__wrapper-2 {
-    margin-right: 93px;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: $tablet) {
+            margin-bottom: 0;
+        }
+
+    @media screen and (min-width: $desktop) {
+        margin-right: 93px;
+    }
 }
 
 
@@ -93,23 +154,33 @@
     font-size: 14px;
     line-height: 1.17;
     letter-spacing: 0.03em;
-    text-align: left;
+    text-align: center;
     text-transform: uppercase;
     color: var(--third-text-color);
+
+    @media screen and (min-width: $desktop) {
+        text-align: left;
+    }
 }
 
 
 .footer__form-box {
-    position: relative;
+    /* position: relative; */
     display: flex;
+    flex-direction: column;
+    align-items: center;
     width: min-content;
+
+    @media screen and (min-width: $desktop) {
+        flex-direction: row;
+    }
 }
 
 
 .footer__input {
-    width: 358px;
+    width: 300px;
     padding: 14px 0px 14px 15px;
-    margin-right: 12px;
+    margin-bottom: 20px;
 
     font-style: normal;
     line-height: 1.25;
@@ -123,12 +194,21 @@
     box-shadow: 0px 4px 4px 0px var(--form-border-shadow);
 
     &::placeholder {
-            font-style: normal;
-            font-size: 16px;
-            line-height: 1.25;
-            letter-spacing: 0.03em;
-            color: var(--footer-link-color);
-        }
+        font-style: normal;
+        font-size: 16px;
+        line-height: 1.25;
+        letter-spacing: 0.03em;
+        color: var(--footer-link-color);
+    }
+
+    @media screen and (min-width: $mobile) {
+        width: 450px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 358px;
+        margin: 0 12px 0 0;
+    }
 }
 
 

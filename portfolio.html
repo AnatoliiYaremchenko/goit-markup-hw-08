@@ -24,40 +24,57 @@
     <!-- Хедер -->
     <header class="header">
       <div class="conteiner header__conteiner">
-        <nav class="header__nav">
-          <a class="logo" href="index.html" lang="en"
-            ><span class="logo--blue">Web</span>Studio</a
+        <a class="logo" href="index.html" lang="en"
+          ><span class="logo--blue">Web</span>Studio</a
+        >
+        <button
+          type="button"
+          class="modal-toggle__btn js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            class="modal-toggle__svg"
+            width="40px"
+            height="40px"
+            aria-label="Переключатель мобильного меню"
           >
-          <ul class="header__nav-list">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <div class="menu-conteiner">
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__item">
+                <a href="index.html" class="header__link">Студия</a>
+              </li>
+              <li class="header__item">
+                <a href="portfolio.html" class="header__link current"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="header__item">
+                <a href="" class="header__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="header__contacts">
             <li class="header__item">
-              <a href="index.html" class="header__link">Студия</a>
-            </li>
-            <li class="header__item">
-              <a href="portfolio.html" class="header__link current"
-                >Портфолио</a
+              <a href="mailto:info@devstudio.com" class="header__link"
+                ><svg class="header__mail-icon">
+                  <use href="./images/icons.svg#icon-envelope"></use></svg
+                >info@devstudio.com</a
               >
             </li>
             <li class="header__item">
-              <a href="" class="header__link">Контакты</a>
+              <a href="tel:+380961111111" class="header__link"
+                ><svg class="header__phone-icon">
+                  <use href="./images/icons.svg#icon-smartphone"></use></svg
+                >+38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-        <ul class="header__contacts">
-          <li class="header__item">
-            <a href="mailto:info@devstudio.com" class="header__link"
-              ><svg class="header__mail-icon">
-                <use href="./images/icons.svg#icon-envelope"></use></svg
-              >info@devstudio.com</a
-            >
-          </li>
-          <li class="header__item">
-            <a href="tel:+380961111111" class="header__link"
-              ><svg class="header__phone-icon">
-                <use href="./images/icons.svg#icon-smartphone"></use></svg
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -87,9 +104,17 @@
               <a href="" class="filter__link">
                 <div class="filter__thumb">
                   <img
+                    srcset="
+                      ./images/02-01-mobile.jpg    450w,
+                      ./images/02-01-mobile@2x.jpg 900w,
+                      ./images/02-01-tablet.jpg    354w,
+                      ./images/02-01-tablet@2x.jpg 708w,
+                      ./images/02-01.jpg           270w,
+                      ./images/02-01@2x.jpg        540w
+                    "
                     src="./images/02-01.jpg"
                     alt="Web-разработка"
-                    width="370"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
                   />
                   <p class="filter__overley">
                     Технокряк это современная площадка распространения
@@ -106,7 +131,19 @@
             <li class="filter__card">
               <a href="" class="filter__link">
                 <div class="filter__thumb">
-                  <img src="./images/02-02.jpg" alt="Web-дизайн" width="370" />
+                  <img
+                    srcset="
+                      ./images/02-02-mobile.jpg    450w,
+                      ./images/02-02-mobile@2x.jpg 900w,
+                      ./images/02-02-tablet.jpg    354w,
+                      ./images/02-02-tablet@2x.jpg 708w,
+                      ./images/02-02.jpg           270w,
+                      ./images/02-02@2x.jpg        540w
+                    "
+                    src="./images/02-02.jpg"
+                    alt="Web-дизайн"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                  />
                   <p class="filter__overley">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
@@ -125,9 +162,17 @@
               <a href="" class="filter__link">
                 <div class="filter__thumb">
                   <img
+                    srcset="
+                      ./images/02-03-mobile.jpg    450w,
+                      ./images/02-03-mobile@2x.jpg 900w,
+                      ./images/02-03-tablet.jpg    354w,
+                      ./images/02-03-tablet@2x.jpg 708w,
+                      ./images/02-03.jpg           270w,
+                      ./images/02-03@2x.jpg        540w
+                    "
                     src="./images/02-03.jpg"
                     alt="Разработка приложений"
-                    width="370"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
                   />
                   <p class="filter__overley">
                     Технокряк это современная площадка распространения
@@ -145,9 +190,17 @@
               <a href="" class="filter__link">
                 <div class="filter__thumb">
                   <img
+                    srcset="
+                      ./images/02-04-mobile.jpg    450w,
+                      ./images/02-04-mobile@2x.jpg 900w,
+                      ./images/02-04-tablet.jpg    354w,
+                      ./images/02-04-tablet@2x.jpg 708w,
+                      ./images/02-04.jpg           270w,
+                      ./images/02-04@2x.jpg        540w
+                    "
                     src="./images/02-04.jpg"
                     alt="Web-маркетинг"
-                    width="370"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
                   />
                   <p class="filter__overley">
                     Технокряк это современная площадка распространения
@@ -165,9 +218,17 @@
               <a href="" class="filter__link">
                 <div class="filter__thumb">
                   <img
+                    srcset="
+                      ./images/02-05-mobile.jpg    450w,
+                      ./images/02-05-mobile@2x.jpg 900w,
+                      ./images/02-05-tablet.jpg    354w,
+                      ./images/02-05-tablet@2x.jpg 708w,
+                      ./images/02-05.jpg           270w,
+                      ./images/02-05@2x.jpg        540w
+                    "
                     src="./images/02-05.jpg"
                     alt="Разработка приложений"
-                    width="370"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
                   />
                   <p class="filter__overley">
                     Технокряк это современная площадка распространения
@@ -185,9 +246,17 @@
               <a href="" class="filter__link">
                 <div class="filter__thumb">
                   <img
+                    srcset="
+                      ./images/02-06-mobile.jpg    450w,
+                      ./images/02-06-mobile@2x.jpg 900w,
+                      ./images/02-06-tablet.jpg    354w,
+                      ./images/02-06-tablet@2x.jpg 708w,
+                      ./images/02-06.jpg           270w,
+                      ./images/02-06@2x.jpg        540w
+                    "
                     src="./images/02-06.jpg"
                     alt="Web-разработка"
-                    width="370"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
                   />
                   <p class="filter__overley">
                     Технокряк это современная площадка распространения
@@ -206,7 +275,19 @@
             <li class="filter__card">
               <a href="" class="filter__link">
                 <div class="filter__thumb">
-                  <img src="./images/02-07.jpg" alt="Web-дизайн" width="370" />
+                  <img
+                    srcset="
+                      ./images/02-07-mobile.jpg    450w,
+                      ./images/02-07-mobile@2x.jpg 900w,
+                      ./images/02-07-tablet.jpg    354w,
+                      ./images/02-07-tablet@2x.jpg 708w,
+                      ./images/02-07.jpg           270w,
+                      ./images/02-07@2x.jpg        540w
+                    "
+                    src="./images/02-07.jpg"
+                    alt="Web-дизайн"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                  />
                   <p class="filter__overley">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
@@ -223,9 +304,17 @@
               <a href="" class="filter__link">
                 <div class="filter__thumb">
                   <img
+                    srcset="
+                      ./images/02-08-mobile.jpg    450w,
+                      ./images/02-08-mobile@2x.jpg 900w,
+                      ./images/02-08-tablet.jpg    354w,
+                      ./images/02-08-tablet@2x.jpg 708w,
+                      ./images/02-08.jpg           270w,
+                      ./images/02-08@2x.jpg        540w
+                    "
                     src="./images/02-08.jpg"
                     alt="Web-маркетинг"
-                    width="370"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
                   />
                   <p class="filter__overley">
                     Технокряк это современная площадка распространения
@@ -243,9 +332,17 @@
               <a href="" class="filter__link">
                 <div class="filter__thumb">
                   <img
+                    srcset="
+                      ./images/02-09-mobile.jpg    450w,
+                      ./images/02-09-mobile@2x.jpg 900w,
+                      ./images/02-09-tablet.jpg    354w,
+                      ./images/02-09-tablet@2x.jpg 708w,
+                      ./images/02-09.jpg           270w,
+                      ./images/02-09@2x.jpg        540w
+                    "
                     src="./images/02-09.jpg"
                     alt="Разработка приложений"
-                    width="370"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
                   />
                   <p class="filter__overley">
                     Технокряк это современная площадка распространения
@@ -334,10 +431,10 @@
           </ul>
         </div>
         <form class="footer__form">
+          <label for="footer-email" class="footer__label"
+            >Подпишитесь на рассылку</label
+          >
           <div class="footer__form-box">
-            <label for="footer-email" class="footer__label"
-              >Подпишитесь на рассылку</label
-            >
             <input
               type="email"
               name="footer-email"
@@ -345,13 +442,71 @@
               id="footer-email"
               class="footer__input"
             />
+            <div class="footer__box-btn">
+              <button type="submit" class="footer__submit-btn">
+                Подписаться
+              </button>
+              <svg class="footer__submit-icon">
+                <use href="./images/icons.svg#icon-telegram"></use>
+              </svg>
+            </div>
           </div>
-          <button type="submit" class="footer__submit-btn">Подписаться</button>
-          <svg class="footer__submit-icon">
-            <use href="./images/icons.svg#icon-telegram"></use>
-          </svg>
         </form>
       </div>
     </footer>
+    <!-- Мобильное меню -->
+    <div class="modal-toggle js-menu-container" id="mobile-menu">
+      <button type="button" class="modal-toggle__btn js-close-menu">
+        <svg class="modal-toggle__svg" width="40" height="40">
+          <use href="./images/icons.svg#icon-menu-close"></use>
+        </svg>
+      </button>
+      <div class="menu-mobile">
+        <nav class="nav-mobile">
+          <ul class="nav-mobile__list">
+            <li class="nav-mobile__item">
+              <a class="nav-mobile__link" href="./index.html">Студия</a>
+            </li>
+            <li class="nav-mobile__item">
+              <a class="nav-mobile__link current" href="./portfolio.html"
+                >Портфолио</a
+              >
+            </li>
+            <li class="nav-mobile__item">
+              <a class="nav-mobile__link" href="">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="contacts-mobile__wrapper">
+          <ul class="contacts-mobile">
+            <li class="contacts-mobile__item">
+              <a class="contacts__link-phone" href="tel:+380961111111">
+                +38 096 111 11 11
+              </a>
+            </li>
+            <li class="contacts-mobile__item">
+              <a class="contacts__link-mobile" href="mailto:info@devstudio.com">
+                info@devstudio.com
+              </a>
+            </li>
+          </ul>
+          <ul class="socials-mobile">
+            <li class="socials-mobile__item">
+              <a class="socials-mobile__link" href="">Instagram</a>
+            </li>
+            <li class="socials-mobile__item">
+              <a class="socials-mobile__link" href="">Twitter</a>
+            </li>
+            <li class="socials-mobile__item">
+              <a class="socials-mobile__link" href="">Facebook</a>
+            </li>
+            <li class="socials-mobile__item">
+              <a class="socials-mobile__link" href="">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

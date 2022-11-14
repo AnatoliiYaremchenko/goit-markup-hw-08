@@ -1,25 +1,60 @@
 
 
 .header {
+    padding-top: 16px;
+    padding-bottom: 16px;
+        
     border-bottom: 1px solid var(--header-border-color);
+
+    @media (min-width: $tablet) {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
      .logo {
-        margin-right: 93px;
-        align-items: center;
+        margin-right: auto;
+
+        @media screen and (min-width: $tablet) {
+            margin-right: 88px;
         }
+
+        @media screen and (min-width: $desktop) {
+            margin-right: 93px;
+        }
+    }
 }
 
 
-.header__conteiner,
-.header__nav,
+.header__conteiner {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+.header__nav {
+    display: flex;
+    align-items: center;
+}
+
+
 .header__contacts {
     display: flex;
     align-items: center;
+
+    @media screen and (min-width: $tablet) {
+        flex-direction: column;
+    }
+
+    @media screen and (min-width: $desktop) {
+        flex-direction: row;
+    }
 }
 
 
 .header__nav-list {
     display: flex;
-    align-items: center;
+    /* margin-right: 50px; */
 
     .header__link {
             color: var(--second-text-color);
@@ -28,12 +63,15 @@
 
 
 .header__item:not(:last-child) {
-    margin-right: 50px;
+      
+    @media (min-width: $tablet) {
+        margin-right: 50px;
+    }
 }
 
 
 .header__link {
-    display: block;
+    display: inline-block;
     padding-top: 32px;
     padding-bottom: 32px;
 
@@ -45,8 +83,8 @@
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:focus, &:hover {
-            color: var(--accent-color);
-        }
+        color: var(--accent-color);
+    }
 }
 
 
@@ -71,25 +109,56 @@
 
 
 .header__contacts {
+    display: flex;
+    align-items: center;
     margin-left: auto;
+    font-size: 12px;
+
+    @media screen and(min-width: $tablet) {
+            display: block;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+    
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: inherit;
+        }
 
     .header__link {
-            display: inline-flex;
-            align-items: center;
+        display: flex;
+        align-items: center;
     
-            color: var(--main-text-color);
-            fill: var(--main-text-color);
+        color: var(--main-text-color);
+        fill: var(--main-text-color);
     
-            transition-property: color, fill;
-            transition-duration: 250ms;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-property: color, fill;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         
-            &:focus,
-            &:hover {
-                fill: var(--accent-color);
-                color: var(--accent-color);
-            }
+        &:focus,
+        &:hover {
+            fill: var(--accent-color);
+            color: var(--accent-color);
         }
+
+        @media screen and (max-width: ($desktop - 1)) {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+    }
+
+    .header__item {
+        @media screen and (max-width: ($desktop - 1)) {
+            margin-right: 0;
+        }
+
+        @media screen and (max-width: $tablet) and (max-width: ($desktop - 1)) {
+            font-size: 12px;
+        }
+    }
 
 }
 
@@ -97,14 +166,22 @@
 .header__mail-icon {
   width: 16px;
   height: 12px;
-  margin-right: 10px;
+  margin-right: 8px;
+
+    @media screen and (min-width: $desktop) {
+    margin-right: 10px;
+}
 }
 
 
 .header__phone-icon {
   width: 10px;
   height: 16px;
-  margin-right: 10px;
+  margin-right: 8px;
+
+    @media screen and (min-width: $desktop) {
+        margin-right: 10px;
+    }
 }
 
 
@@ -113,7 +190,7 @@
 
     font-family: "Raleway", sans-serif;
     font-weight: 700;
-    font-size: 26px;
+    font-size: 24px;
     line-height: 1.17;
     letter-spacing: 0.03em;
     color: var(--logo-header-color);
@@ -121,4 +198,33 @@
     &--blue {
         color: var(--accent-color);
     }
+
+    @media (min-width:$desktop) {
+        font-size: 26px;
+    }
+}
+
+
+.menu-conteiner {
+    display: none;
+    width: 100%;
+
+    @media (min-width:$tablet) {
+        display: flex;
+    }
+}
+
+.modal-toggle__btn {
+    position: absolute;
+        right: 15px;
+        top: -3px;
+        display: block;
+        padding: 0;
+        border: none;
+        background-color: inherit;
+        cursor: pointer;
+
+        @media screen and (min-width: $tablet) {
+            display: none;
+        }
 }
